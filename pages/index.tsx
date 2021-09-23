@@ -7,7 +7,6 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 import {Button, Card, CardText, CardTitle, Col, Container, Row} from "reactstrap";
 
 const Home = ({home, article}: { home: IMain, article: IArticle[] }) => {
-    console.log(article)
     return (
         <div>
             <Head>
@@ -41,7 +40,7 @@ const Home = ({home, article}: { home: IMain, article: IArticle[] }) => {
                                         {article.fields.description}
                                     </CardText>
 
-                                    <Link href={`/article/${article.fields.slug}`}>
+                                    <Link href={`/articles/${article.fields.slug}`}>
                                     <Button>
                                         Читать
                                     </Button>
